@@ -1,0 +1,7 @@
+a=["!","@"]
+words="happy !dsjfk@@gjek! !jfkw"
+
+
+words.replace("@","")
+words.replace("!","")
+print(words)
