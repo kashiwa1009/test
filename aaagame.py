@@ -1,5 +1,5 @@
 import pygame 
-
+#it is the pygame test
 pygame.init()
 
 width,heigth=640,480
@@ -13,4 +13,7 @@ while running:
     for event in pygame.event.get():
         if event.type==pygame.QUIT:
              running=False
+
+
+print("aaa")
 pygame.quit
