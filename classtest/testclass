@@ -1,0 +1,70 @@
+from this import d
+
+
+def average(numbers): 
+     return sum(numbers)/len(numbers)
+
+scores=[12,12,1,21,21,23,123,123,12,3]
+print(f'average:{average(scores)}')
+
+
+# 需記住資料存在哪個變數，又要把它傳入哪個函式
+#定義一個新資料型別，同時包含資料和函式
+
+class scorelist:
+     def __init__(self,scores):
+         self.scores=scores # 在此類別建立屬性 
+
+     def average(self):
+         return sum(self.scores)/len(self.scores)
+
+class_score=scorelist([12,12,3,123,123,123,123])
+print(f'average:{class_score.average()}')
+
+#呼叫scorelist十，python會像尋找一般變數名稱依樣依LEGB規則找到ScoreList(指向一個類別的全域變數名稱)
+#scorelist也是可呼叫的callable，因此加上()函傳入參數呼叫。
+
+
+
+#__init__()也不會使用return回傳值，就算有也會被__new__()無視。
+
+
+#呼叫__init__()，替新物件建立屬性並給予出初始值 ，在執行建構子__new__() 創新物件，再將新實例物件傳給呼叫者。
+
+
+#因此__init__的主要用途，是替新物件建立屬性並給予初始值。 不同於c#和Java會有宣告屬性。 python在執行階段時動態建立屬性。
+#只要透過傳入__init__()的第一個參數self，就能動態建立屬性
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#把程式碼分成區別明確的物件，各自負責不同功能。這樣城市更容易規劃和維護，也能把專案分派給多人來共同開發
+
+#打造分層的類別，每一層的子類別的內容會繼承(iningeriting)或沿用，甚至改寫父類別
+#減少需要撰寫的程式碼量和開發時間，並強化相似資料類別之間的關係
+
+#python類別用起來跟內建型別並無兩樣，因此自訂類別用起來感覺會向python語言的自然延伸，而不是強行附加上去的東西。在python中一切都是物件。
+
+
+#python不會將物件內的東西隱藏起來，物件的介面與實作是不同的東西。
+#當使用別人撰寫的物件時，只在乎其介面(我能呼叫那些method，他們能做什麼事)，壓根不必知道底下是怎麼實作的
+
+
+
+#物件的自我 -self 參數 
+#在列別定義函式或method，第一個參數會寫成self。
+
+def __init__(self,scores):
+    self.scores=scores
+
+class
