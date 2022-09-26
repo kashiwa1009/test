@@ -5,4 +5,3 @@ pygame.init()
 while True:
     if pygame.getevent():
         
-
