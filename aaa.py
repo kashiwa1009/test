@@ -1,3 +1,6 @@
+print("HI!! GIT TEST!!!!!")
+
+
 def aaa(data,*,start=0,end=0):
     for value in (data[start:end]):
         print(value)
